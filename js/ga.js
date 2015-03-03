@@ -6,7 +6,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', '############', 'placeiq.com');
 ga('send', 'pageview');
 
-ga('send', 'event', 'In-Page Events', 'Events', 'Page Visit');
+ga('send', 'event', 'In-Page Events', 'Page Events', 'Page Visit');
 
 var firstinteraction = 0;
 
@@ -15,7 +15,7 @@ var trackOutboundLink = function(url) {
      function () {
      	if(firstinteraction === 0){
      		firstinteraction = 1;
-     		ga('send', 'event', 'In-Page Events', 'Events', 'First Interaction', {'hitCallback':
+     		ga('send', 'event', 'In-Page Events', 'Page Events', 'First Interaction', {'hitCallback':
 				function(){document.location = url}
      		});
             console.log("First Interaction");
@@ -29,7 +29,7 @@ var trackOutboundLink = function(url) {
 function trackEvent(el){
 	if(firstinteraction === 0){
      	firstinteraction = 1;
-     	ga('send', 'event', 'In-Page Events', 'Events', 'First Interaction');
+     	ga('send', 'event', 'In-Page Events', 'Page Events', 'First Interaction');
         console.log("First Interaction");
     }
 	ga('send', 'event', el.getAttribute("ga-category"), el.getAttribute("ga-action"), el.getAttribute("ga-label"));
